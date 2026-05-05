@@ -10,4 +10,14 @@ function multiplication(a, b) {
   return a * b;
 }
 
-module.exports = { addition, soustraction, multiplication };
+let historique = [];
+
+function ajouterHistorique(calcul) {
+  historique.push(calcul); 
+}
+
+function recupererHistorique() {
+  return historique;
+}
+
+module.exports = { addition, soustraction, multiplication, ajouterHistorique, recupererHistorique };
