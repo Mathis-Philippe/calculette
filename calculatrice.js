@@ -10,6 +10,10 @@ function multiplication(a, b) {
   return a * b;
 }
 
+function division(a, b) {
+  return a / b;
+}
+
 let historique = [];
 
 function ajouterHistorique(calcul) {
@@ -20,4 +24,8 @@ function recupererHistorique() {
   return historique;
 }
 
-module.exports = { addition, soustraction, multiplication, ajouterHistorique, recupererHistorique };
+function effacerHistorique() {
+  historique = [];
+}
+
+module.exports = { addition, soustraction, multiplication, division, ajouterHistorique, recupererHistorique, effacerHistorique };
