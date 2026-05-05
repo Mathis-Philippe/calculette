@@ -6,4 +6,8 @@ function soustraction(a, b) {
   return a - b;
 }
 
-module.exports = { addition, soustraction };
+function multiplication(a, b) {
+  return a * b;
+}
+
+module.exports = { addition, soustraction, multiplication };
