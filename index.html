@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ma Calculatrice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculatrice-container">
+        <input type="text" id="ecran" readonly value="0">
+        
+        <div class="boutons">
+            <button onclick="entrerChiffre(7)">7</button>
+            <button onclick="entrerChiffre(8)">8</button>
+            <button onclick="entrerChiffre(9)">9</button>
+            <button class="operation" onclick="choisirOperation('+')">+</button>
+
+            <button onclick="entrerChiffre(4)">4</button>
+            <button onclick="entrerChiffre(5)">5</button>
+            <button onclick="entrerChiffre(6)">6</button>
+            <button class="operation" onclick="choisirOperation('-')">-</button>
+
+            <button onclick="entrerChiffre(1)">1</button>
+            <button onclick="entrerChiffre(2)">2</button>
+            <button onclick="entrerChiffre(3)">3</button>
+            <button class="operation" onclick="choisirOperation('*')">*</button>
+
+            <button onclick="effacerEcran()">C</button>
+            <button onclick="entrerChiffre(0)">0</button>
+            <button class="operation" onclick="calculer()">=</button>
+        </div>
+    </div>
+
+    <div class="historique-container">
+        <h3>Historique</h3>
+        <button onclick="viderHistorique()">Effacer l'historique</button>
+        <ul id="liste-historique"></ul>
+    </div>
+
+    <script src="calculatrice.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

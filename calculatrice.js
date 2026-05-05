@@ -28,4 +28,6 @@ function effacerHistorique() {
   historique = [];
 }
 
-module.exports = { addition, soustraction, multiplication, division, ajouterHistorique, recupererHistorique, effacerHistorique };
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { addition, soustraction, multiplication, division, ajouterHistorique, recupererHistorique, effacerHistorique };
+}
