@@ -2,39 +2,47 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Ma Calculatrice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Calculatrice Pro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculatrice-container">
-        <input type="text" id="ecran" readonly value="0">
-        
-        <div class="boutons">
-            <button onclick="entrerChiffre(7)">7</button>
-            <button onclick="entrerChiffre(8)">8</button>
-            <button onclick="entrerChiffre(9)">9</button>
-            <button class="operation" onclick="choisirOperation('+')">+</button>
+    <div class="main-wrapper">
+        <div class="calculatrice-card">
+            <div class="brand">CALCULATRICE</div>
+            <input type="text" id="ecran" readonly value="0">
+            
+            <div class="boutons">
+                <button class="btn-clear" onclick="effacerEcran()">C</button>
+                <button class="btn-op" onclick="choisirOperation('/')">/</button>
+                
+                <button onclick="entrerChiffre(7)">7</button>
+                <button onclick="entrerChiffre(8)">8</button>
+                <button onclick="entrerChiffre(9)">9</button>
+                <button class="btn-op" onclick="choisirOperation('*')">×</button>
 
-            <button onclick="entrerChiffre(4)">4</button>
-            <button onclick="entrerChiffre(5)">5</button>
-            <button onclick="entrerChiffre(6)">6</button>
-            <button class="operation" onclick="choisirOperation('-')">-</button>
+                <button onclick="entrerChiffre(4)">4</button>
+                <button onclick="entrerChiffre(5)">5</button>
+                <button onclick="entrerChiffre(6)">6</button>
+                <button class="btn-op" onclick="choisirOperation('-')">-</button>
 
-            <button onclick="entrerChiffre(1)">1</button>
-            <button onclick="entrerChiffre(2)">2</button>
-            <button onclick="entrerChiffre(3)">3</button>
-            <button class="operation" onclick="choisirOperation('*')">*</button>
+                <button onclick="entrerChiffre(1)">1</button>
+                <button onclick="entrerChiffre(2)">2</button>
+                <button onclick="entrerChiffre(3)">3</button>
+                <button class="btn-op" onclick="choisirOperation('+')">+</button>
 
-            <button onclick="effacerEcran()">C</button>
-            <button onclick="entrerChiffre(0)">0</button>
-            <button class="operation" onclick="calculer()">=</button>
+                <button class="btn-zero" onclick="entrerChiffre(0)">0</button>
+                <button class="btn-egal" onclick="calculer()">=</button>
+            </div>
         </div>
-    </div>
 
-    <div class="historique-container">
-        <h3>Historique</h3>
-        <button onclick="viderHistorique()">Effacer l'historique</button>
-        <ul id="liste-historique"></ul>
+        <div class="historique-card">
+            <h3>Historique</h3>
+            <div class="historique-liste-container">
+                <ul id="liste-historique"></ul>
+            </div>
+            <button class="btn-clear-hist" onclick="viderHistorique()">Effacer l'historique</button>
+        </div>
     </div>
 
     <script src="calculatrice.js"></script>

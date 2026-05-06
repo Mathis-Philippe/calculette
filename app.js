@@ -42,7 +42,8 @@ function calculer() {
 
     if (operationEnCours === '+') resultat = addition(a, b);
     if (operationEnCours === '-') resultat = soustraction(a, b);
-    if (operationEnCours === '*') resultat = multiplication(a, b);
+    if (operationEnCours === '*') resultat = multiplication(a, b);  
+    if (operationEnCours === '/') resultat = division(a, b);
 
     const texteCalcul = `${a} ${operationEnCours} ${b} = ${resultat}`;
     ajouterHistorique(texteCalcul);
